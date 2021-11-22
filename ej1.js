@@ -14,19 +14,20 @@ Finalmente crear una lista de jugadores con dos jugadores de ejemplo (invéntate
 */
 
 class jugador{
-    constructor(nombre, ocupacion, faccion){
+    constructor(nombre, ocupacion, puntosVida, faccion){
         this.nombre = nombre;
         this.ocupacion = ocupacion;
-        this.puntosVida = 100;
+        this.puntosVida = puntosVida;
+        this.maxPuntosVida = 100;
         this.faccion = faccion;
     }
 
     toString(){
-        console.log("El nombre del jugador es "+this.nombre+", su ocupación es "+this.ocupacion+", tiene "+this.puntosVida+" puntos de vida y es de la facción "+this.faccion+".");
+        console.log("El nombre del jugador es "+this.nombre+", su ocupación es "+this.ocupacion+", tiene "+this.puntosVida+" puntos de vida de "+this.maxPuntosVida+" y es de la facción "+this.faccion+".");
     }
 }
 
-let jugador1 = new jugador("Álvaro", "leñador", "alianza");
-let jugador2 = new jugador("Pepe","tabernero","saqueador");
+let jugador1 = new jugador("Álvaro", "leñador",80, "alianza");
+let jugador2 = new jugador("Pepe","tabernero",50, "saqueador");
 jugador1.toString();
 jugador2.toString();
